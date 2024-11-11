@@ -1,0 +1,17 @@
+(thought this was part of part5)
+
+user->>browser: Write note in text field
+user->>browser: Click Save button
+
+Note right of browser: Event handler prevents default form submission
+
+browser->>browser: Create note object
+browser->>browser: Add note to local notes list
+browser->>browser: Update page to display new note
+
+Note right of browser: Send note to server as JSON
+
+browser->>server: POST /new_note_spa (with note JSON data)
+activate server
+server-->>browser: 201 Created (Note saved successfully)
+deactivate server
