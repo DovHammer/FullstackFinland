@@ -1,0 +1,27 @@
+sequenceDiagram
+    participant browser
+    participant server
+    participant user
+
+    user->> browser: enters text and saves
+    browser->> server: POST .../new_note
+    server->> browser: 302 (redirect) GET /notes
+
+    browser->>server: GET html
+    activate
+    server->>browser html doc
+    deactivate
+    
+    browser->>server: GET css
+    activate
+    server->>browser css doc
+    deactivate
+    
+    browser->>server: GET js
+    activate
+    server->>browser html js
+    deactivate
+
+    activate
+    server-->>browser: 201 Created (Note saved successfully)
+    deactivate
