@@ -1,0 +1,19 @@
+{
+  "persons": [
+    {
+      "id": "c5af",
+      "name": "Dan Abramov",
+      "number": "098-765-4321"
+    },
+    {
+      "id": "cb1c",
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122"
+    },
+    {
+      "id": "24d1",
+      "name": "Arto Hellas",
+      "number": "040-123456"
+    }
+  ]
+}
